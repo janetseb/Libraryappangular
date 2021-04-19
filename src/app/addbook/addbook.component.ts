@@ -18,6 +18,9 @@ export class AddbookComponent implements OnInit {
      image :''
     }
 
+
+
+
     onFileSelected(event:any){
       this.selectedFile = <File>event.target.files[0];
       console.log(this.selectedFile);
@@ -34,6 +37,8 @@ export class AddbookComponent implements OnInit {
 
     }
 
+
+    
 
   constructor(private _auth:AuthService,private _router: Router,private _http:HttpClient) 
   {
