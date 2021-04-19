@@ -23,7 +23,7 @@ export class AddbookComponent implements OnInit {
       console.log(this.selectedFile);
       const fd = new FormData();
       fd.append('image', this.selectedFile, this.selectedFile.name);
-      this._http.post<any>("https://janetlibraryappapi.herokuapp.com/addauthor/upload",fd)
+      this._http.post<any>("https://janetlibraryappangular.herokuapp.com/addauthor/upload",fd)
     .subscribe((data)=>{
       (
       this.resultUrl=data["url"],

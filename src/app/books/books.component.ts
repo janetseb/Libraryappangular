@@ -11,7 +11,7 @@ export class BooksComponent implements OnInit {
 
   constructor(public http:HttpClient) { }
   ngOnInit(): void {
-    this.http.get("https://janetlibraryappapi.herokuapp.com/books")
+    this.http.get("https://janetlibraryappangular.herokuapp.com/books")
     .subscribe((companies)=>{
       this.apidata = companies;
       console.log(this.apidata)

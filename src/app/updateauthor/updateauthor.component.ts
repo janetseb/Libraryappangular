@@ -22,7 +22,7 @@ export class UpdateauthorComponent implements OnInit {
     console.log(this.selectedFile);
     const fd = new FormData();
     fd.append('image', this.selectedFile, this.selectedFile.name);
-    this._http.post<any>("https://janetlibraryappapi.herokuapp.com/addauthor/upload",fd)
+    this._http.post<any>("https://janetlibraryappangular.herokuapp.com/addauthor/upload",fd)
   .subscribe((data)=>{
     (
     this.resultUrl=data["url"],
@@ -38,7 +38,7 @@ export class UpdateauthorComponent implements OnInit {
       let id = params.get('id');
       console.log(id);
       console.log(this.author);
-      this._http.post<any>(`https://janetlibraryappapi.herokuapp.com/authors/update/${id}`,this.author)
+      this._http.post<any>(`https://janetlibraryappangular.herokuapp.com/authors/update/${id}`,this.author)
       .subscribe((data)=>{
         (console.log(data))
       })

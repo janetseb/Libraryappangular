@@ -17,7 +17,7 @@ export class ReadmoreComponent implements OnInit {
     this.route.paramMap.subscribe(params=>{
 
       let id = params.get('id');
-      this.http.get(`https://janetlibraryappapi.herokuapp.com/books/delete/${id}`)
+      this.http.get(`https://janetlibraryappangular.herokuapp.com/books/delete/${id}`)
      .subscribe((companies)=>{
        this.apidata = companies;
        console.log(this.apidata)
@@ -32,7 +32,7 @@ export class ReadmoreComponent implements OnInit {
 this.route.paramMap.subscribe(params=>{
 
  let id = params.get('id');
- this.http.get(`https://janetlibraryappapi.herokuapp.com/books/${id}`)
+ this.http.get(`https://janetlibraryappangular.herokuapp.com/books/${id}`)
 .subscribe((companies)=>{
   this.apidata = companies;
   console.log(this.apidata)

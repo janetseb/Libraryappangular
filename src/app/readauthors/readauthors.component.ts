@@ -17,7 +17,7 @@ export class ReadauthorsComponent implements OnInit {
    this.route.paramMap.subscribe(params=>{
 
      let id = params.get('id');
-     this.http.get(`https://janetlibraryappapi.herokuapp.com/authors/delete/${id}`)
+     this.http.get(`https://janetlibraryappangular.herokuapp.com/authors/delete/${id}`)
     .subscribe((companies)=>{
       this.apidata = companies;
       console.log(this.apidata)
@@ -32,7 +32,7 @@ export class ReadauthorsComponent implements OnInit {
     this.route.paramMap.subscribe(params=>{
 
       let id = params.get('id');
-      this.http.get(`https://janetlibraryappapi.herokuapp.com/authors/${id}`)
+      this.http.get(`https://janetlibraryappangular.herokuapp.com/authors/${id}`)
      .subscribe((companies)=>{
        this.apidata = companies;
        console.log(this.apidata)

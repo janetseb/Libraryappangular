@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     console.log(this.login);
 
-    this._http.post<any>("https://janetlibraryappapi.herokuapp.com/login/loguser",this.login)
+    this._http.post<any>("https://janetlibraryappangular.herokuapp.com/login/loguser",this.login)
     .subscribe((data)=>{
      if(data['msg']=='correct password')
      {

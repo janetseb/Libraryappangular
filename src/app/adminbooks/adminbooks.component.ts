@@ -13,7 +13,7 @@ export class AdminbooksComponent implements OnInit {
   onClickDelete(id:string)
    {
     console.log(id)
-   this.http.get(`https://janetlibraryappapi.herokuapp.com/books/delete/${id}`)
+   this.http.get(`https://janetlibraryappangular.herokuapp.com/books/delete/${id}`)
      .subscribe((companies)=>{
        this.apidata = companies;
        console.log(this.apidata)
@@ -22,7 +22,7 @@ export class AdminbooksComponent implements OnInit {
    }
 
   ngOnInit(): void {
-     this.http.get("https://janetlibraryappapi.herokuapp.com/books")
+     this.http.get("https://janetlibraryappangular.herokuapp.com/books")
     .subscribe((companies)=>{
       this.apidata = companies;
       console.log(this.apidata)

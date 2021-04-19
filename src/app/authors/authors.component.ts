@@ -10,7 +10,7 @@ export class AuthorsComponent implements OnInit {
   constructor(public http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get("https://janetlibraryappapi.herokuapp.com/authors")
+    this.http.get("https://janetlibraryappangular.herokuapp.com/authors")
     .subscribe((companies)=>{
       this.apidata = companies;
       console.log(this.apidata)
